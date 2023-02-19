@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-migrate-3.4.0.js"></script> -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; margin: 10px 0;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="contenedor-tarjetas-formulario">
+
+    <section class="contenedor-tarjetas">
+      <div class="cntd-trjt trjt-front">
+        <div class="trjt-logo"></div>
+        <div class="trjt-datos">
+          <p id="nro-crd-prc" class="trjt-dts numero">0000 0000 0000 0000</p>
+          <p id="nbr-crd-prc" class="trjt-dts nombre">Jane Appleseed</p>
+          <div id="fdx-crd-prc" class="trjt-dts fecha">00/00</div>
+        </div>
+      </div>
+      <div class="cntd-trjt trjt-back">
+        <p id="cvc-crd-prc" class="trjt-back-cvc">000</p>
+      </div>
+    </section>
+
+    <section class="contenedor-formulario">
+      <form id="frml-dts-sbm" class="cntd-frml-datos">
+
+        <div class="frml-dts nombre">
+          <label>Cardholder Name</label>
+          <input type="text" placeholder="e.g. Jane Appleseed" id="nbr-crd" required/>
+        </div>
+
+        <div class="frml-dts number">
+          <label>Card Number</label>
+          <input
+                type="number"
+                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                minlength="16"
+                maxlength="16"
+                placeholder="e.g. 1234 5678 9123 0000"
+                id="nro-crd"
+                required
+              />
+        </div>
+
+        <div class="frml-dts fchExp-cvc">
+          <div class="dts-trjt fecha-exp">
+            <label class="fhcExp-tlt">Exp. Date (mm/yy)</label>
+            <input
+                      type="number"
+                      placeholder="MM"
+                      oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                      minlength="2"
+                      maxlength="2"
+                      id="fdx1-crd"
+                      required
+                    />
+            <input
+                    oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                      type="number"
+                      minlength="2"
+                      maxlength="2"
+                      placeholder="YY"
+                      id="fdx2-crd"
+                      required
+                    />
+          </div>
+          <div class="dts-trjt cvc">
+            <label class="cvc-tlt">CVC</label>
+            <input class="cvc-ipt" type="number" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3" placeholder="e.g. 123" id="cvc-crd" required />
+          </div>
+        </div>
+
+        <button id="submit-btn" class="cntd-frml-btn" type="submit">Confirm</button>
+      </form>
+
+
+      <div id="pg-nvd" class="pagina-enviado ocultar">
+        <img src="images/icon-complete.svg" alt="">
+        <span>Thank You!</span>
+        <p>We've added your card details</p>
+        <a href="index.html" class="pg-nvd-btn" type="submit">Continue</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/MoisesRmx" target="_blank">Moises Roberto</a>.
+  </div>
+
+</body>
+<script src="script.js"></script>
+</html>

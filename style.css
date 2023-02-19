@@ -1,0 +1,352 @@
+.contenedor-tarjetas-formulario {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.contenedor-tarjetas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: url(images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 28.489583333333332vw;
+  height: 100%;
+}
+
+.cntd-trjt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 547px;
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 50px -10px black;
+}
+
+.cntd-trjt.trjt-front {
+  right: -10vw;
+  background-image: url(images/bg-card-front.png);
+  margin-bottom: 20px;
+}
+
+.trjt-logo {
+  background-image: url(images/card-logo.svg);
+  background-repeat: no-repeat;
+  background-size: 100px auto;
+  background-position: top left;
+  width: 495px;
+  height: 100px;
+}
+
+.trjt-datos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 495px;
+  height: 110px;
+}
+
+
+.trjt-dts {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  margin: auto 0;
+}
+
+.trjt-dts.numero {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  font-size: 2rem;
+}
+
+.trjt-dts.nombre {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  font-size: 1rem;
+}
+
+.trjt-dts.fecha {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  text-align: right;
+  font-size: 1rem;
+}
+
+.cntd-trjt.trjt-back {
+  right: -15vw;
+  background-image: url(images/bg-card-back.png);
+  margin-top: 20px;
+}
+
+.trjt-back-cvc {
+  position: absolute;
+  right: 70px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  color: hsl(0, 0%, 100%);
+  margin: auto 0;
+}
+
+.contenedor-formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.cntd-frml-datos {
+  display: grid;
+  grid-template-columns: repeat(1 , 1fr);
+  grid-template-rows: 80px 80px 80px 50px;
+  grid-gap: 35px;
+  width: 500px;
+  height: auto;
+}
+
+.cntd-frml-datos.ocultar {
+  display: none;
+}
+
+.frml-dts input {
+  box-sizing: border-box;
+  border: solid 1px hsl(279, 6%, 55%);
+  border-radius: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
+  color: hsl(278, 68%, 11%);
+  text-align: left;
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+}
+
+.frml-dts label {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+  color: hsl(278, 68%, 11%);
+  text-transform: uppercase;
+  width: 100%;
+  height: 30px;
+}
+
+.frml-dts input.error {
+  border: solid 1px hsl(0, 100%, 66%);
+}
+
+.frml-dts.fchExp-cvc {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 20px;
+}
+
+.dts-trjt.fecha-exp {
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 30px 50px;
+  grid-gap: 0 15px;
+}
+
+.fhcExp-tlt {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.fhcExp-ipt1 {
+  width: 100%;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  margin: 0;
+}
+
+.fhcExp-ipt2 {
+  width: 100%;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  margin: 0;
+}
+
+.dts-trjt.cvc {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 30px 50px;
+}
+
+.cntd-frml-btn {
+  background-color: hsl(278, 68%, 11%);
+  border: none;
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+}
+
+.pagina-enviado.ocultar {
+  display: none;
+}
+
+.pagina-enviado {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  height: 260px;
+}
+
+.pagina-enviado img {
+  width: 70px;
+  height: 70px;
+}
+
+.pagina-enviado span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  color: hsl(278, 68%, 11%);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.pagina-enviado p {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  color: hsl(279, 6%, 55%);
+  margin: 0;
+
+}
+
+.pg-nvd-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(278, 68%, 11%);
+  border-radius: 10px;
+  border: none;
+  color: hsl(0, 0%, 100%);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  width: 500px;
+  height: 50px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .contenedor-tarjetas-formulario {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .contenedor-tarjetas {
+    justify-content: right;
+    background-image: url(images/bg-main-mobile.png);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 240px;
+  }
+
+  .cntd-trjt {
+    position: absolute;
+    background-size: 100% 100%;
+    width: 280px;
+    height: 153px;
+    border-radius: 8px;
+  }
+
+  .cntd-trjt.trjt-front {
+    top: 122px;
+    right: 60px;
+    margin: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+
+  .trjt-logo {
+    background-size: auto 100%;
+    width: 100%;
+    height: 30px;
+  }
+
+  .trjt-datos {
+    width: 100%;
+    height: 60px;
+  }
+
+  .trjt-dts {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 100%);
+  }
+
+  .trjt-dts.numero {
+    font-size: 1.19rem;
+  }
+
+  .trjt-dts.nombre {
+    font-size: .7rem;
+  }
+
+  .trjt-dts.fecha {
+    font-size: .7rem;
+  }
+
+  .cntd-trjt.trjt-back {
+    top: 35px;
+    right: 20px;
+    margin: 0;
+  }
+
+  .trjt-back-cvc {
+    right: 35px;
+    font-size: .6rem;
+  }
+
+  .contenedor-formulario {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0 25px;
+    margin-top: 60px;
+  }
+
+  .cntd-frml-datos {
+    grid-gap: 20px;
+  }
+
+  .frml-dts label {
+    font-size: .9rem;
+  }
+
+  .pagina-enviado {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .pg-nvd-btn {
+    width: 100%;
+  }
+}
